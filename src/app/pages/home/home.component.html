@@ -1,0 +1,66 @@
+<div class="home-container">
+  <!-- Carousel-Photos -->
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-inner">
+      <div class="carousel-item" *ngFor="let slide of slides; let i = index" [class.active]="i === 0">
+        <div class="shadow-overlay">
+          <img [src]="slide.image" class="d-block w-100 img-fluid" [alt]="'Image ' + (i + 1)">
+        </div>
+        <div class="carousel-caption d-none d-md-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100">
+          <h1>{{ slide.title }}</h1>
+          <p>{{ slide.description }}</p>
+          <button type="button" class="btn btn-primary">Shikoni dhomat</button>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+<!-- Rooms -->
+<div class="rooms-container">
+  <div class="room-description">
+    <h2>Dhoma dhe Suita</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil aliquam quasi magni. Dolor dignissimos commodi sapiente voluptates voluptatum quos sint accusamus, soluta perferendis provident minus ullam nemo ratione alias. Et?</p>
+    <div class="items">
+      <div class="item" *ngFor="let room of rooms">
+        <img [src]="room.image" [alt]="room.name" class="room-bg">
+        <div class="item-details">
+          <h4 class="item-name">{{ room.name }}</h4>
+          <h5 class="item-price">{{ room.price }}</h5>
+          <a href="#" class="read-more-btn">Lexo më shumë</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Extra Services -->
+<div class="extra-services-container bg-dark">
+  <div class="extra-services-description d-flex flex-column align-items-center text-white">
+    <div>Sherbimet Shtese</div>
+    <p>sfdghjiklm;:vtybunoi,pc;toybuipno^,pvrertbeczuio,</p>
+  </div>
+  <div class="service-container d-flex row">
+    <div class="card" *ngFor="let service of extraServices">
+      <a href="#">
+        <img [src]="service.image">
+        <div class="service-text">
+          <h5>{{ service.name }}</h5>
+          <div class="service-buttons">Lexo më shumë</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Contact-us -->
+
+
+
+</div>

@@ -1,0 +1,11 @@
+<div class="User-area">
+  <div class="User-avtar" (click)="toggleUserDropdown()">
+    <i class=" user-icon fas fa-user"></i> 
+  <span class="user-name">Ada</span>
+  </div>
+    <ul class="User-Dropdown U-open" [ngClass]="{'U-open': isDropdownOpen}">
+      <li><a href="#">Profili im</a></li>
+      <li><a href="#">Notifications</a><span>40</span></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+</div>

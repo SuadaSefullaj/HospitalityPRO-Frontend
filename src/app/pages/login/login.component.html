@@ -13,24 +13,27 @@
       <div class="row d-flex justify-content-center">
         <div class="col-lg-8">
           <h2 class="fw-bold mb-5 text-white">Login</h2>
-          <form>
+          <form [formGroup]="loginForm">
 
             <div class="login-text text-white">Ju lutem logohuni në adresën tuaj për të kryer rezervimin!</div>
        
             <div class="d-flex justify-content-center">
               <div class="form-outline mb-4">
-                <input type="email" id="form3Example3" class="input form-control" placeholder="Email address" />
+                <input type="email" formControlName="email" id="form3Example3" class="input form-control" placeholder="Email address" />
+                <small *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</small>
               </div>
             </div>
-            
+      
             <div class="d-flex justify-content-center">
               <div class="form-outline mb-4">
-                <input type="password" id="form3Example4" class="form-control input" placeholder="Password" />
+                <input type="password"formControlName="password" id="form3Example4" class="form-control input" placeholder="Password" />
+                <small *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')" class="text-danger ">
+                  *Ju lutem vendosni password-in tuaj!</small>
               </div>
             </div>
-            
-            <button type="submit" class=" login-button btn btn-primary btn-block mb-4" >
-          Login
+         
+            <button type="button" (click)="onLogin()" class="login-button btn btn-primary btn-block mb-4">
+              Login
             </button>
             
             <div class="d-flex align-items-center justify-content-center pb-4">

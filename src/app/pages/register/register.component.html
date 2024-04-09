@@ -14,37 +14,37 @@
       <div class="row d-flex justify-content-center">
         <div class="col-lg-8">
           <h2 class="fw-bold mb-5 text-white">Sign up now</h2>
-          <form>
+          <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
             <div class="row">
               <div class="col-md-6 mb-4">
                 <div class="form-outline">
-                  <input type="text" id="form3Example1" class="form-control input" placeholder="First Name" />
+                  <input type="text" id="form3Example1" class="form-control input" formControlName="name" placeholder="First Name" />
                 </div>
               </div>
               <div class="col-md-6 mb-4">
                 <div class="form-outline">
-                  <input type="text" id="form3Example2" class="form-control input" placeholder="Last Name" />
+                  <input type="text" id="form3Example2" class="form-control input" formControlName="surname" placeholder="Last Name" />
                 </div>
               </div>
             </div>
             <!-- Email input -->
             <div class="form-outline mb-4">
-              <input type="email" id="form3Example3" class="input form-control" placeholder="Email address" />
+              <input type="email" id="form3Example3" class="input form-control" formControlName="email" placeholder="Email address" />
             </div>
             <!-- Password input -->
             <div class="form-outline mb-4">
-              <input type="password" id="form3Example4" class="form-control input" placeholder="Password" />
+              <input type="password" id="form3Example4" class="form-control input" formControlName="password" placeholder="Password" />
             </div>
                <!-- Phone Number -->
                <div class="form-outline mb-4">
-                <input type="tel" id="form3Example4" class="form-control input" placeholder="Phone Number" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                <input type="tel" id="form3Example5" class="form-control input" formControlName="phoneNumber" placeholder="Phone Number" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
 
               </div>
             <!-- Date of Birth input -->
             <div class="form-outline mb-4">
-              <input type="date" id="form3Example5" class="form-control" placeholder="Date of Birth" style="background-color: #333; color: #fff; border-color: #fff;"/>
+              <input type="date" id="form3Example6" class="form-control" formControlName="birth" placeholder="Date of Birth" style="background-color: #333; color: #fff; border-color: #fff;"/>
             </div>
-
+            <small *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</small>
                 <!-- Checkbox -->
                 <div class="form-check d-flex justify-content-center mb-4">
                   <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
@@ -53,7 +53,7 @@
                   </label>
                 </div>
             <!-- Submit button -->
-            <button type="submit" class="register-button btn btn-primary btn-block mb-4">
+            <button type="submit" class="register-button btn btn-primary btn-block mb-4" >
               Sign up
             </button>
           </form>

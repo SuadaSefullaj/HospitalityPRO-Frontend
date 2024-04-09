@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component,Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'navbar',
@@ -6,8 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  showModal: boolean = false;
 
-  constructor() { }
+  constructor() {}
 
   toggleNav(navEl: HTMLElement, hamburgerEl: HTMLElement): void {
     navEl.classList.toggle('nav--open');

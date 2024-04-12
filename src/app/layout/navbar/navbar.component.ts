@@ -1,4 +1,5 @@
 import { Component,Output, EventEmitter } from '@angular/core';
+import { AuthService } from 'src/app/services/AuthService/auth.service';
 
 
 @Component({
@@ -7,8 +8,12 @@ import { Component,Output, EventEmitter } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  isLoggedIn: boolean = false;
 
-  constructor() {}
+  constructor(public auth: AuthService) {
+    this.isLoggedIn = this.auth.isLoggedIn();
+  }
+
   
   toggleNav(navEl: HTMLElement, hamburgerEl: HTMLElement): void {
     navEl.classList.toggle('nav--open');

@@ -16,12 +16,12 @@
         </section>
       </div>
       <!-- Right side: Login/register link and social media icons -->
-      <div class="top-bar__right">
-        <div class="login-register"id="login-register">
+      <div class="top-bar__right" >
+        <div class="login-register"id="login-register" *ngIf="!isLoggedIn">
           <i class="fa-solid fa-power-off icon"></i> 
           <a routerLink="/login">Login/Register</a>
         </div>
-        <div class="separator"></div> 
+        <div class="separator" *ngIf="!isLoggedIn"></div> 
         <div class="social-icons">
           <a href="#" class="icon-link"><i class="fab fa-instagram"></i></a>
           <a href="#" class="icon-link"><i class="fab fa-facebook"></i></a>
@@ -56,7 +56,7 @@
             </button>
           </li>
           <li class="nav__item">
-          <user-dropdown></user-dropdown>
+          <user-dropdown *ngIf="auth.isLoggedIn()" ></user-dropdown>
           </li>
         </ul>
        

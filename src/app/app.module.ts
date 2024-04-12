@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +14,8 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserDropdownComponent } from './components/user-dropdown/user-dropdown.component';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -27,6 +29,7 @@ import { UserDropdownComponent } from './components/user-dropdown/user-dropdown.
     FooterComponent,
     ContactUsComponent,
     UserDropdownComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,10 @@ import { UserDropdownComponent } from './components/user-dropdown/user-dropdown.
  
     
   ],
-  providers: [],
+  providers: [{
+    provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor,
+    multi:true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=PT+Sans+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&family=PT+Sans+Narrow&family=Quando&display=swap');
+
+h1 {
+  font-family: 'Quando', serif;
+  font-size: 33px;
+}
+p{
+  font-size: 16px;
+}
 .home-container{
   margin-top: 100px;
-  background-color: rgba(62, 59, 59, 0.29)
+  background-color: rgba(62, 59, 59, 0.529);
+  
 }
 /* Carousel-Photos */
 .carousel-item {
@@ -11,6 +22,12 @@
 .carousel-item img {
   object-fit: cover;
   height: 100%;
+}
+.slide-title{
+    font-family: 'Dancing Script', cursive; 
+    font-size: 60px;
+    margin-bottom: 22px;
+
 }
 
 @keyframes zoomInOut {
@@ -44,12 +61,13 @@
     width: 80%;
     height: 100vh;
     margin: 0 auto;
+    color:white;
 
 }
 .room-description{
    padding: 20px;
 }
-.room-description h2,p{
+.room-description h1,p{
     text-align: center;
    
 }
@@ -68,7 +86,7 @@
     width: 48%;
     height: 320px;
     position: relative;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 .item-details{
     position: absolute;
@@ -93,20 +111,11 @@
     width: 100%;
     height: 100%;
 }
-.read-more-btn{
-    text-decoration: none;
-    color: #fff;
-    display: inline-block;
-    background-color: rgb(122, 120, 120);
-    text-align: center;
-    padding: 12px 26px;
-    border-radius: 20px;
-}
-.item:hover {
+.item:hover, .card:hover {
   transform: scale(1.05); 
 }
 
-.read-more-btn:hover {
+.read-more-btn:hover, .service-buttons:hover {
   background-color: #6c757d; 
   color: #fff; 
 }
@@ -115,6 +124,11 @@
 .extra-services-container{
   padding-top: 30px;
   padding-bottom: 50px;
+
+}
+.extra-services-description{
+  width: 80%;
+  margin: 0 auto;
 }
 .service-container {
   display: flex;
@@ -126,9 +140,11 @@
 }
 .card a{
     position: relative;
+    transition: transform 0.3s ease;
 
 }
 .card {
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
   max-width: 350px; 
   padding: 0;
 }
@@ -150,18 +166,19 @@
 .service-text h5 {
   font-weight: 700;
   font-size: 1.25rem;
-  color: #fff;
+  color: rgb(250, 248, 248);
 }
 .service-text h5:before {
   position: absolute;
   margin-top: -25px;
 }
-.service-buttons {
-    color: #262626;
+.service-buttons,.read-more-btn {
+    color:white;
     width: fit-content;
     padding: 7px 20px;
     border-radius: 100px;
-    background-color: #ffd600;
-    border: 2px solid transparent;
+    background-color: #7b7979;
+    border: 1px solid white;
+    text-decoration: none;
 }
 

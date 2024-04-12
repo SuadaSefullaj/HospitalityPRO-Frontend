@@ -14,4 +14,5 @@ export class NavbarComponent {
     navEl.classList.toggle('nav--open');
     hamburgerEl.classList.toggle('hamburger--open');
   }
+  
 }

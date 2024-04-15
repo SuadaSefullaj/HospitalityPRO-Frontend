@@ -7,6 +7,8 @@ import { RegistrationComponent } from './pages/register/register.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AuthGuard } from './guards/auth.guard';
+import { RoomsComponent } from './pages/rooms/rooms.component';
+import { ServicesComponent } from './pages/services/services.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -15,6 +17,8 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       { path: 'home', component: HomeComponent },
+      { path: 'rooms', component: RoomsComponent },
+      { path: 'services', component: ServicesComponent },
       { path: 'contact-us', component: ContactUsComponent },
     ]
   },

@@ -1,0 +1,20 @@
+<div class="services-container text-white">
+  <div class="services-header position-relative">
+    <img src="assets/registerBackground.jpg" class="img-fluid" alt="">
+    <div class="custom-shape-bg position-absolute bottom-0 start-0 p-2">
+      <h1 class="text-center">Sherbimet Shtese</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <div *ngFor="let service of services; let i = index" class="services-type-container">
+      <div class="service-container" [class.left]="i % 2 === 0" [class.right]="i % 2 !== 0">
+        <img [src]="service.image" [alt]="service.title" class="service">
+      </div>
+      <div class="service-info">
+        <h2>{{ service.title }}</h2>
+        <p>{{ service.description }}</p>
+      </div>
+    </div>
+  </div>
+</div>

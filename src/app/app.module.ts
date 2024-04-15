@@ -16,6 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserDropdownComponent } from './components/user-dropdown/user-dropdown.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { RoomsComponent } from './pages/rooms/rooms.component';
+import { ServicesComponent } from './pages/services/services.component';
 
 
 @NgModule({
@@ -30,6 +32,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     ContactUsComponent,
     UserDropdownComponent,
     DashboardComponent,
+    RoomsComponent,
+    ServicesComponent,
   ],
   imports: [
     BrowserModule,

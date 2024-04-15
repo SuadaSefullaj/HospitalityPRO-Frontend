@@ -1,0 +1,55 @@
+.rooms-container{
+  margin-top: 100px;
+  background-color: gray;
+}
+
+.rooms-header >img{
+  width:100%;
+  height: 300px;
+}
+
+.custom-shape-bg {
+  width: 750px; 
+  height: 90px;
+background-color: gray;
+  clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
+}
+
+.container{
+  margin-left: 140px;
+  margin-right: 140px;
+
+}
+.room-type-container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+ 
+}
+
+.room-container {
+  width: 100%; 
+}
+
+.room-image {
+  max-width: 100%;
+}
+
+
+.room-info {
+  width: 50%; 
+  padding: 0 20px; 
+}
+
+@media (max-width: 768px) {
+  .room-type-container {
+    flex-direction: column;
+  }
+  
+  .room-info {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+

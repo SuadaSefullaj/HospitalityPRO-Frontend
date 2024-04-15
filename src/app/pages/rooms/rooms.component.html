@@ -1,0 +1,27 @@
+<div class="rooms-container text-white">
+  <div class="rooms-header position-relative">
+    <img src="assets/registerBackground.jpg" class="img-fluid" alt="">
+    <div class="custom-shape-bg position-absolute bottom-0 start-0 p-2">
+      <h1 class="text-center">Dhomat dhe Suitat</h1>
+    </div>
+  </div>
+
+  <div class="container">
+    <div *ngFor="let room of rooms; let i = index" class="room-type-container">
+      <div class="room-container" [class.left]="i % 2 === 0" [class.right]="i % 2 !== 0">
+        <img [src]="room.image" [alt]="room.title" class="room-image">
+      </div>
+      <div class="room-info">
+        <h2>{{ room.title }}</h2>
+        <p>{{ room.description }}</p>
+        <ul class="list-unstyled">
+          <li><i class="fas fa-users"></i> Capacity: {{ room.capacity }}</li> 
+          <li><i class="fas fa-bed"></i> Bed Type: {{ room.bedType }}</li> 
+          <li><i class="fas fa-dollar-sign"></i> Price: {{ room.price }}</li> 
+        </ul>
+        <p>{{ room.features }}</p>
+        <button class="btn btn-primary">Rezervo ketu</button> 
+      </div>
+    </div>
+  </div>
+</div>

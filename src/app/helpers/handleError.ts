@@ -8,7 +8,7 @@ export function handleError(error: HttpErrorResponse) {
     errorMessage = error.error.message;
   } else {
     // Server-side error
-    errorMessage = error.error; // Assuming the error message is a string
+    errorMessage = error.error; 
   }
   return throwError(errorMessage);
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup,Validators } from '@angular/forms';
+import { FormBuilder, FormGroup,FormControl,Validators } from '@angular/forms';
 import { AuthService } from 'src/app/services/AuthService/auth.service';
 import { Router } from '@angular/router';
 import ValidateForm from 'src/app/helpers/validationform';
@@ -29,7 +29,6 @@ export class LoginComponent implements OnInit {
       this.auth.login(this.loginForm.value)
       .subscribe({
         next:(res)=>{
-          console.log("Login response:", res);
           this.loginForm.reset();
           this.auth.storeToken(res.accessToken);
           this.router.navigate(['home'])

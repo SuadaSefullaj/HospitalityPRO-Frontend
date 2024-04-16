@@ -1,7 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Stoke&display=swap');
+
 .services-container{
+  max-width: 100%;
   margin-top: 100px;
-  background-color: gray;
+  background-color:rgb(97, 96, 96);
 }
+
+.container-title{
+  font-family: 'Black Han Sans', sans-serif;
+  margin-top: 30px;
+}
+
 
 .services-header >img{
   width:100%;
@@ -11,29 +20,38 @@
 .custom-shape-bg {
   width: 750px; 
   height: 90px;
-background-color: gray;
+  background-color:rgb(97, 96, 96);
   clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
 }
 
-.services-type-container {
+.container{
+  max-width: 100%;
+  padding:50px 170px;
+}
+.service-type-container {
   display: flex;
   flex-direction: row;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
+  max-width: 100%;
+ 
+}
+.service-type-container.even .service-image-container {
+  order: 2;
 }
 
-.service-container {
-  width: 50%; 
+.service-image-container {
+  width: 80%; 
+  
 }
 
 .service-image {
   max-width: 100%;
 }
 
-
 .service-info {
-  width: 50%; 
+  width: 100%; 
   padding: 0 20px; 
+  margin-left: 25px;
+  margin-right: 25px;
+  text-align: justify; 
 }
-
-
-

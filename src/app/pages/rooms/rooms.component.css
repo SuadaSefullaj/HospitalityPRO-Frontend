@@ -3,7 +3,7 @@
 .rooms-container{
   max-width: 100%;
   margin-top: 100px;
-  background-color: rgb(154, 153, 153);
+  background-color:rgb(97, 96, 96);
 }
 
 .container-title{
@@ -20,7 +20,7 @@
 .custom-shape-bg {
   width: 750px; 
   height: 90px;
-  background-color: rgb(154, 153, 153);
+  background-color:rgb(97, 96, 96);
   clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
 }
 

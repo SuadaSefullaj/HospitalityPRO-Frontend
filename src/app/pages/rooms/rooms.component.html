@@ -8,10 +8,10 @@
 
   <div class="container d-flex flex-column">
     <div *ngFor="let room of rooms; let i = index" class="room-type-container" [class.even]="i % 2 !== 0">
-      <div class="room-image-container" [class.left]="i % 2 === 0">
+      <div class="room-image-container border border-dark" [class.left]="i % 2 === 0">
         <img [src]="room.image" [alt]="room.title" class="room-image">
       </div>
-      <div class="room-info d-flex flex-column align-items-center justify-content-center fs-6">
+      <div class="room-info d-flex flex-column align-items-center justify-content-center fs-6 mx-4">
         <h2 class="fs-2">{{ room.title }}</h2>
         <p>{{ room.description }}</p>
         <ul class="feature-list list-unstyled row">

@@ -123,10 +123,6 @@ body {
   column-gap: 40px;
 }
 
-.nav__item {
-  
-}
-
 .nav__link {
   color: rgba(255, 255, 255, 0.75);
   transition: all 0.2s;
@@ -176,7 +172,7 @@ i:hover{
 }
 
 
-/* For JS */
+/* For TS */
 .nav--open {
   left: 50% !important;
 }
@@ -231,4 +227,3 @@ i:hover{
   }
 } 
 
-/* Modal */

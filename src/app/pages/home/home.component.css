@@ -10,9 +10,10 @@ p{
 }
 .home-container{
   margin-top: 100px;
-  background-color: rgba(62, 59, 59, 0.529);
-  
+  background-color:rgb(83, 82, 82);
 }
+
+
 /* Carousel-Photos */
 .carousel-item {
   animation: zoomInOut 5s infinite alternate;
@@ -54,6 +55,62 @@ p{
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5); 
 }
+/* Hotel Description */
+.hotel-container{
+  max-width: 100%;
+  padding: 70px 180px;
+  color: white;
+}
+.hotel-description{
+  margin-right: 50px;
+}
+.description-text{
+  text-align: justify;
+}
+.description-photos {
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.description-photos .stack-back {
+  grid-column: 4/-1;
+  grid-row: 1;
+  width: 100%;
+  z-index: 1;
+}
+
+.description-photos .stack-front {
+  grid-row: 1;
+  grid-column: 1/span 8;
+  margin-top: 20%;
+  width: 100%;
+  z-index: 2;
+}
+
+.description-photos{
+max-width: 50%;
+}
+
+.description-photos>img{
+width: 100%;
+}
+
+.hotel-button {
+  display: inline-block;
+  background: #4285f4;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 20px 30px;
+  border-radius: 5px;
+  box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 300ms;
+  transition: all ease-in-out 300ms;
+}
+.hotel-button:hover {
+  box-shadow: 0px 37px 20px -20px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translate(0px, -10px) scale(1.2);
+          transform: translate(0px, -10px) scale(1.2);
+}
 
 /* Rooms */
 
@@ -92,7 +149,7 @@ p{
     position: absolute;
     top: 0;
     width: 50%;
-    background-color: rgba(41, 40, 40, 0.8);
+    background-color: rgba(24, 24, 24, 0.8);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -181,4 +238,6 @@ p{
     border: 1px solid white;
     text-decoration: none;
 }
+
+
 

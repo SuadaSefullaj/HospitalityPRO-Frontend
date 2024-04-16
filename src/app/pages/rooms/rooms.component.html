@@ -1,26 +1,26 @@
 <div class="rooms-container text-white">
   <div class="rooms-header position-relative">
     <img src="assets/registerBackground.jpg" class="img-fluid" alt="">
-    <div class="custom-shape-bg position-absolute bottom-0 start-0 p-2">
-      <h1 class="text-center">Dhomat dhe Suitat</h1>
+    <div class="custom-shape-bg position-absolute bottom-0 start-0 p-2 d-flex justify-content-center align-items-center">
+      <h1 class="container-title text-center fs-1">Dhomat dhe Suitat</h1>
     </div>
   </div>
 
-  <div class="container">
-    <div *ngFor="let room of rooms; let i = index" class="room-type-container">
-      <div class="room-container" [class.left]="i % 2 === 0" [class.right]="i % 2 !== 0">
+  <div class="container d-flex flex-column">
+    <div *ngFor="let room of rooms; let i = index" class="room-type-container" [class.even]="i % 2 !== 0">
+      <div class="room-image-container" [class.left]="i % 2 === 0">
         <img [src]="room.image" [alt]="room.title" class="room-image">
       </div>
-      <div class="room-info">
-        <h2>{{ room.title }}</h2>
+      <div class="room-info d-flex flex-column align-items-center justify-content-center fs-6">
+        <h2 class="fs-2">{{ room.title }}</h2>
         <p>{{ room.description }}</p>
-        <ul class="list-unstyled">
-          <li><i class="fas fa-users"></i> Capacity: {{ room.capacity }}</li> 
-          <li><i class="fas fa-bed"></i> Bed Type: {{ room.bedType }}</li> 
-          <li><i class="fas fa-dollar-sign"></i> Price: {{ room.price }}</li> 
-        </ul>
+        <ul class="feature-list list-unstyled row">
+          <li class="col-12 col-sm-4"><i class="fas fa-users"></i> Kapaciteti: {{ room.capacity }}</li> 
+          <li class="col-12 col-sm-4"><i class="fas fa-bed"></i> Lloji i shtratit: {{ room.bedType }}</li> 
+          <li class="col-12 col-sm-4"><i class="fas fa-dollar-sign"></i> Cmimi: {{ room.price }}</li> 
+      </ul>
         <p>{{ room.features }}</p>
-        <button class="btn btn-primary">Rezervo ketu</button> 
+        <button class="room-btn btn btn-primary">Rezervo ketu</button> 
       </div>
     </div>
   </div>

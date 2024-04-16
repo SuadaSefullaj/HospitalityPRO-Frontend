@@ -20,8 +20,8 @@ export class HomeComponent {
   ];
     rooms = [
       { name: "Dhomat Standarte", price: "4000-8000 ALL", image: "assets/room-photos/standart-room.jpg" },
-      { name: "Suitat", price: "10000-18000 ALL", image: "assets/room-photos/suites-room.jpg" },
-      { name: "Dhomat Famijlare", price: "10000-15000 ALL", image: "assets/room-photos/family-room.jpg" },
+      { name: "Suitat", price: "12000-18000 ALL", image: "assets/room-photos/suites-room.jpg" },
+      { name: "Dhomat Famijlare", price: "9000-15000 ALL", image: "assets/room-photos/family-room.jpg" },
       { name: "Dhomat VIP", price: "25000-45000 ALL", image: "assets/room-photos/vip-room.jpg" }
     ];
 

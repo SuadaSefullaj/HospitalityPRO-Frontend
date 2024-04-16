@@ -1,7 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Stoke&display=swap');
+
 .rooms-container{
+  max-width: 100%;
   margin-top: 100px;
-  background-color: gray;
+  background-color: rgb(154, 153, 153);
 }
+
+.container-title{
+  font-family: 'Black Han Sans', sans-serif;
+  margin-top: 30px;
+}
+
 
 .rooms-header >img{
   width:100%;
@@ -11,24 +20,27 @@
 .custom-shape-bg {
   width: 750px; 
   height: 90px;
-background-color: gray;
+  background-color: rgb(154, 153, 153);
   clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);
 }
 
 .container{
-  margin-left: 140px;
-  margin-right: 140px;
-
+  max-width: 100%;
+  padding:50px 140px;
 }
 .room-type-container {
   display: flex;
   flex-direction: row;
   margin-bottom: 20px;
+  max-width: 100%;
  
 }
+.room-type-container.even .room-image-container {
+  order: 2;
+}
 
-.room-container {
-  width: 100%; 
+.room-image-container {
+  width: 50%; 
 }
 
 .room-image {
@@ -39,6 +51,18 @@ background-color: gray;
 .room-info {
   width: 50%; 
   padding: 0 20px; 
+  text-align: justify; 
+}
+
+.feature-list{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width:100%;
+}
+
+.room-btn{
+  margin-top: 30px;
+  max-width: 150px;
 }
 
 @media (max-width: 768px) {

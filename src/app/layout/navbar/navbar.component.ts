@@ -14,7 +14,10 @@ export class NavbarComponent {
     this.isLoggedIn = this.auth.isLoggedIn();
   }
 
-  
+  showAlert(): void {
+    alert("Ju lutem logohuni ne adresen tuaj per te rezervuar!");
+  }
+
   toggleNav(navEl: HTMLElement, hamburgerEl: HTMLElement): void {
     navEl.classList.toggle('nav--open');
     hamburgerEl.classList.toggle('hamburger--open');

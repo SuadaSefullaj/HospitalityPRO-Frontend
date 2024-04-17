@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Stoke&display=swap');
+
+.reservation-section{
+  max-width: 100%;
+}
+.online-reservation{
+  max-width: 100%;
+}
+.reservation-title{
+  font-family: 'Black Han Sans', sans-serif;
+}
+
+/* Calendar */
+
+.calendar {
+  width: 60%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.weekday {
+  text-align: center;
+  font-weight: bold;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.day {
+  height:70px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.day:hover{
+  background-color: gray;
+}
+.past {
+  color: gray;
+  cursor: not-allowed;
+}
+.past:hover {
+  background-color: transparent;
+}
+
+
+/* Online-Reservation */
+.client-booking {
+  width: 40%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.client-booking >input, .client-booking >select{
+  background-color: rgba(47, 47, 47, 0.627);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-input,
+.form-select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.price-display {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.btn-book,
+.btn-cancel {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-book:hover,
+.btn-cancel:hover {
+  background-color: #0056b3;
+}

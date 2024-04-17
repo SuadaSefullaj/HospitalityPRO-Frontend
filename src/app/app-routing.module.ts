@@ -9,6 +9,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AuthGuard } from './guards/auth.guard';
 import { RoomsComponent } from './pages/rooms/rooms.component';
 import { ServicesComponent } from './pages/services/services.component';
+import { ReservationComponent } from './pages/reservation/reservation.component';
+import { ErrorPageComponent } from './pages/error-page/error-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -20,11 +22,13 @@ const routes: Routes = [
       { path: 'rooms', component: RoomsComponent },
       { path: 'services', component: ServicesComponent },
       { path: 'contact-us', component: ContactUsComponent },
+      { path: 'reservation', component: ReservationComponent },
     ]
   },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegistrationComponent },
   { path: 'dashboard', component: DashboardComponent, canActivate:[AuthGuard] },
+  { path: '**', component: ErrorPageComponent },
 ];
 
 @NgModule({

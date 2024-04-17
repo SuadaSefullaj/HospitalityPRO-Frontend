@@ -1,0 +1,9 @@
+.error-page-container {
+  height: 100vh; 
+}
+.image-container{
+  max-width: 20%;
+}
+.image-container>img{
+  max-width:100%;
+}

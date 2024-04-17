@@ -9,7 +9,7 @@
         <div class="carousel-caption d-none d-md-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100">
           <h1 class="slide-title">{{ slide.title }}</h1>
           <p>{{ slide.description }}</p>
-          <button type="button" class="btn btn-primary">Shikoni dhomat</button>
+          <button type="button" class="btn btn-primary" [routerLink]="['/rooms']">Shikoni dhomat</button>
         </div>
       </div>
     </div>
@@ -34,7 +34,7 @@
         HospitalityPRO Hotel Tirana është një oaz i gatimeve për të gjithë dashamirët e ushqimit. Me një gamë të zgjeruar të zgjedhjeve lokale dhe ndërkombëtare, si dhe një përgatitje të shkëlqyer, restorantet e tij ofrojnë një përvojë kulinarisht të pasur.</div>
       <div class="description-text mt-4 fs-6">  
         Gjithashtu, në HospitalityPRO Hotel Tirana, mysafirët mund të përfitojnë nga shërbimet e palestrës me pajisjet e fundit për ushtrime të shëndetshme. Spa ofron një ambient të qetë dhe relaksues për të shijuar trajtime të mrekullueshme të spa-s, ndërsa pishina ofron një mënyrë të shkëlqyer për të rënë në relaksim pas një dite të ngarkuar.</div>
-<div class="hotel-button mt-5">Na Kontaktoni</div>
+<div class="hotel-button mt-5" [routerLink]="['/contact-us']">Na Kontaktoni</div>
     </div>
     <div class="description-photos d-grid position-relative">
       <img src="assets/hotel.jpg" alt="" class="stack-front border border-white border-4 shadow">
@@ -55,7 +55,7 @@
         <div class="item-details">
           <h4 class="item-name">{{ room.name }}</h4>
           <h5 class="item-price">{{ room.price }}</h5>
-          <a href="#" class="read-more-btn">Lexo më shumë</a>
+          <a href="#" class="read-more-btn" [routerLink]="['/rooms']">Lexo më shumë</a>
         </div>
       </div>
     </div>
@@ -74,14 +74,10 @@
         <img [src]="service.image">
         <div class="service-text">
           <h5 class="service-name">{{ service.name }}</h5>
-          <button class="service-buttons">Lexo më shumë</button>
+          <button class="service-buttons" [routerLink]="['/services']">Lexo më shumë</button>
         </div>
       </a>
     </div>
   </div>
 </div>
-
-<!-- Contact-us -->
-
-   
 </div>

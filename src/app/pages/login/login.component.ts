@@ -14,6 +14,7 @@ export class LoginComponent implements OnInit {
   credentials: any = {};
   loginForm!:FormGroup;
   errorMessage: string | null = null;
+  hidePassword=true;
   constructor(private fb:FormBuilder,private auth:AuthService,private router:Router) { }
 
   ngOnInit(): void {
@@ -21,6 +22,10 @@ export class LoginComponent implements OnInit {
       email:['',Validators.required],
       password:['',Validators.required]
     })
+  }
+
+  showPassword(){
+    this.hidePassword=!this.hidePassword;
   }
 
   onLogin(){

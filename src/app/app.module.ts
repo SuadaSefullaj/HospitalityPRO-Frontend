@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +18,8 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { RoomsComponent } from './pages/rooms/rooms.component';
 import { ServicesComponent } from './pages/services/services.component';
+import { ReservationComponent } from './pages/reservation/reservation.component';
+import { ErrorPageComponent } from './pages/error-page/error-page.component';
 
 
 @NgModule({
@@ -34,6 +36,8 @@ import { ServicesComponent } from './pages/services/services.component';
     DashboardComponent,
     RoomsComponent,
     ServicesComponent,
+    ReservationComponent,
+    ErrorPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,8 +45,7 @@ import { ServicesComponent } from './pages/services/services.component';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
- 
-    
+    FormsModule
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor,

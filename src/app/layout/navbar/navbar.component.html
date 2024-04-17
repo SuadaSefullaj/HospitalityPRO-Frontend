@@ -39,22 +39,30 @@
    <nav class="nav" #nav>
         <ul class="nav__list d-flex flew-row align-items-center justify-content-center ">
           <li class="nav__item">
-            <a class="nav__link" href="#">Kreu</a>
+            <a class="nav__link" href="/home">Kreu</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">Dhoma dhe Suita</a>
+            <a class="nav__link" href="/rooms">Dhoma dhe Suita</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">Shërbimet Shtesë</a>
+            <a class="nav__link" href="/services">Shërbimet Shtesë</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">Kontakt</a>
+            <a class="nav__link" href="/contact-us">Kontakt</a>
           </li>
           <li class="nav__item">
-            <button type="button" class="btn btn-primary">
-              Rezervo Dhomën
-            </button>
+            <ng-container *ngIf="isLoggedIn; else showLoginAlert">
+              <button type="button" class="btn btn-primary" [routerLink]="['/reservation']">
+                Rezervo Dhomën
+              </button>
+            </ng-container>
+            <ng-template #showLoginAlert>
+              <button type="button" class="btn btn-primary" (click)="showAlert()">
+                Rezervo Dhomën
+              </button>
+            </ng-template>
           </li>
+          
           <li class="nav__item">
           <user-dropdown *ngIf="auth.isLoggedIn()" ></user-dropdown>
           </li>

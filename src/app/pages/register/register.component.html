@@ -18,14 +18,14 @@
             <div class="row">
               <div class="col-md-6 mb-4">
                 <div class="form-outline">
-                  <input type="text" id="form3Example1" class="form-control input" formControlName="name" placeholder="First Name" />
+                  <input type="text" id="form3Example1" class="form-control input" formControlName="name" placeholder="First Name" (keyup.enter)="surnameInput.focus()" #nameInput />
                   <small *ngIf="signUpForm.controls['name'].dirty && signUpForm.hasError('required','name')" class="text-danger ">
                     *This field is required!</small>
                 </div>
               </div>
               <div class="col-md-6 mb-4">
                 <div class="form-outline">
-                  <input type="text" id="form3Example2" class="form-control input" formControlName="surname" placeholder="Last Name" />
+                  <input type="text" id="form3Example2" class="form-control input" formControlName="surname" placeholder="Last Name" (keyup.enter)="emailInput.focus()" #surnameInput />
                   <small *ngIf="signUpForm.controls['surname'].dirty && signUpForm.hasError('required','surname')" class="text-danger ">
                     *This field is required!</small>
                 </div>
@@ -33,7 +33,7 @@
             </div>
             <!-- Email input -->
             <div class="form-outline mb-4">
-              <input type="email" id="form3Example3" class="input form-control" formControlName="email" placeholder="Email address" />
+              <input type="email" id="form3Example3" class="input form-control" formControlName="email" placeholder="Email address" (keyup.enter)="passwordInput.focus()" #emailInput />
               <small *ngIf="signUpForm.controls['email'].dirty && signUpForm.hasError('required','email')" class="text-danger ">
                 *This field is required!</small>
                 <small *ngIf="errorMessage && signUpForm.controls['email'].dirty" class="text-danger">
@@ -43,7 +43,7 @@
             </div>
             <!-- Password input -->
             <div class="form-outline mb-4">
-              <input type="password" id="form3Example4" class="form-control input" formControlName="password" placeholder="Password" />
+              <input type="password" id="form3Example4" class="form-control input" formControlName="password" placeholder="Password" (keyup.enter)="phoneNumberInput.focus()" #passwordInput />
               <small *ngIf="signUpForm.controls['password'].dirty && signUpForm.hasError('required','password')" class="text-danger ">
                 *This field is required!</small>
                 <small 
@@ -53,13 +53,21 @@
             </div>
                <!-- Phone Number -->
                <div class="form-outline mb-4">
-                <input type="tel" id="form3Example5" class="form-control input" formControlName="phoneNumber" placeholder="Phone Number" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                <input 
+                type="tel" 
+                id="form3Example5" 
+                class="form-control input" 
+                formControlName="phoneNumber" 
+                placeholder="Phone Number" 
+                oninput="this.value = this.value.replace(/[^0-9]/g, '');" 
+                (keyup.enter)="birthInput.focus()" #phoneNumberInput>
+                
                 <small *ngIf="signUpForm.controls['phoneNumber'].dirty && signUpForm.hasError('required','phoneNumber')" class="text-danger ">
                   *This field is required!</small>
               </div>
            <!-- Date of Birth input -->
            <div class="form-outline mb-4">
-            <input type="date" id="form3Example6" class="form-control" formControlName="birth" placeholder="Date of Birth" style="background-color: #333; color: #fff; border-color: #fff;"/>
+            <input type="date" id="form3Example6" class="form-control" formControlName="birth" placeholder="Date of Birth" (keyup.enter)="onSubmit()" #birthInput style="background-color: #333; color: #fff; border-color: #fff;"/>
             <small *ngIf="signUpForm.controls['birth'].dirty && signUpForm.hasError('required','birth')" class="text-danger">
               *This field is required!
             </small>

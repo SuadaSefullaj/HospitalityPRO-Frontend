@@ -17,24 +17,27 @@
 
             <div class="login-text text-white">Ju lutem logohuni në adresën tuaj për të kryer rezervimin!</div>
        
-            <div class="d-flex justify-content-center" >
-              <div class="form-outline mb-4 d-flex flex-column justify-content-start">
-                <input type="email" formControlName="email" id="form3Example3" class="input form-control" placeholder="Email address" />
-                <small *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')" class="text-danger ">
-                  *This field is required!</small>
-              </div>
-            </div>
-      
             <div class="d-flex justify-content-center">
-              <div class="form-outline mb-4">
-                <input type="password"formControlName="password" id="form3Example4" class="form-control input" placeholder="Password"  />
-                <small *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')" class="text-danger ">
-                  *This field is required!</small>
-                  <small *ngIf="errorMessage" class="text-danger">
-                    *Email or Password doesn't match!
-                </small>
+              <div class="form-outline mb-4 d-flex flex-column justify-content-start">
+                  <input type="email" formControlName="email" id="form3Example3" class="input form-control" placeholder="Email address" (keyup.enter)="passwordInput.focus()" #emailInput />
+                  <small *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')" class="text-danger">
+                      *This field is required!
+                  </small>
               </div>
-            </div>
+          </div>
+          
+          <div class="d-flex justify-content-center">
+              <div class="form-outline mb-4">
+                  <input #passwordInput type="password" formControlName="password" id="form3Example4" class="form-control input" placeholder="Password" (keyup.enter)="onLogin()" />
+                  <small *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')" class="text-danger">
+                      *This field is required!
+                  </small>
+                  <small *ngIf="errorMessage" class="text-danger">
+                      *Email or Password doesn't match!
+                  </small>
+              </div>
+          </div>
+          
             
             <button type="button" (click)="onLogin()" class="login-button btn btn-primary btn-block mb-4">
               Login

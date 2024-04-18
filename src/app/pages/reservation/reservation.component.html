@@ -13,6 +13,7 @@
           <div class="col-lg-8">
             <h2 class="reservation-title fs-3 mb-5 text-white">Rezervim Online</h2>
             <section class="reservation-section d-flex flex-row align-items-strech justify-content-center">
+              <!-- Calendar -->
                 <div class="calendar text-white d-flex flex-column justify-content-center">
                     <div class="header mb-4">
                         <button (click)="previousMonth()" class="btn btn-link">
@@ -41,10 +42,9 @@
                     (click)="day !== null && !isDateInPast(currentYear, currentMonthIndex, day) && selectDate(day)">
                  {{ day }}
                </div>
-               
-                  </div>
-                  
-                </div>
+              </div>
+           </div>
+           <!-- Client Booking Form -->
                 <div class="client-booking d-flex flex-column text-white ">
                   <label for="arrival-date">Data e Mberritjes:</label>
                   <input type="text" id="arrival-date" name="arrival-date" class="form-control mb-4" style=" color: #fff;" [value]="arrivalDate ? arrivalDate.toDateString() : ''" readonly>

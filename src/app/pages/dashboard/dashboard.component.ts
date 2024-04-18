@@ -26,7 +26,5 @@ export class DashboardComponent implements OnInit {
       const roleFromToken=this.auth.getRoleFromToken();
       this.role=val || roleFromToken;
     })
-
   }
-
 }

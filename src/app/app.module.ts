@@ -22,6 +22,7 @@ import { ReservationComponent } from './pages/reservation/reservation.component'
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +39,7 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
     ServicesComponent,
     ReservationComponent,
     ErrorPageComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -45,7 +47,8 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS, useClass:AuthInterceptor,

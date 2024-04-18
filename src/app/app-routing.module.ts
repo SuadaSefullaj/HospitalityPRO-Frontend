@@ -11,6 +11,7 @@ import { RoomsComponent } from './pages/rooms/rooms.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { ReservationComponent } from './pages/reservation/reservation.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
+import { MapComponent } from './components/map/map.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -23,6 +24,7 @@ const routes: Routes = [
       { path: 'services', component: ServicesComponent },
       { path: 'contact-us', component: ContactUsComponent },
       { path: 'reservation', component: ReservationComponent },
+      { path: 'map', component: MapComponent },
     ]
   },
   { path: 'login', component: LoginComponent },

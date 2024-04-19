@@ -15,7 +15,6 @@ export class AuthService {
 
   constructor(private http: HttpClient,private router:Router) { 
     this.userPayload = this.decodedToken();
-    console.log('User Payload:', this.userPayload);
   }
 
   signUp(clientObj: any) {
@@ -34,6 +33,7 @@ export class AuthService {
 
   logout(){
     localStorage.clear();
+    this.userPayload = null; 
     this.router.navigate(['login']);
   }
 
@@ -61,9 +61,7 @@ export class AuthService {
   decodedToken() {
     const jwtHelper = new JwtHelperService();
     const tokenResponse = this.getToken()!;
-    // const tokenResponse = localStorage.getItem('token')!;
     const decodedToken = jwtHelper.decodeToken(tokenResponse);
-    console.log(decodedToken);
     this.userPayload = decodedToken; 
     return decodedToken;
   
@@ -71,7 +69,6 @@ export class AuthService {
   
   getNameFromToken() {
     if (this.userPayload) {
-      console.log('Name from token:', this.userPayload.name);
       return this.userPayload.name;
     }
   }

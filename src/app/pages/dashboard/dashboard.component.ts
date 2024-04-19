@@ -27,4 +27,7 @@ export class DashboardComponent implements OnInit {
       this.role=val || roleFromToken;
     })
   }
+  logout(){
+    this.auth.logout();
+  }
 }

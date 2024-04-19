@@ -54,15 +54,12 @@ export class LoginComponent implements OnInit {
           //     }
           //   });
             
-          // //  this.userStore.getRoleFromStore().subscribe(role => {
-          //   if (role === 'Admin') {
-          //     this.router.navigate(['dashboard']); 
-          //   } else {
-          //     this.router.navigate(['home']);
-          //   }
-          // });
-       
-          this.router.navigate(['home']);
+          const role = this.auth.getRoleFromToken();
+            if (role === 'Admin') {
+              this.router.navigate(['dashboard']); 
+            } else {
+              this.router.navigate(['home']); 
+            }
           },
           error: (err) => {
             this.errorMessage = err;

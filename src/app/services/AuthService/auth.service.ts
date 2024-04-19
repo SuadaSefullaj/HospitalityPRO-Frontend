@@ -75,7 +75,6 @@ export class AuthService {
   
   getRoleFromToken() {
     if (this.userPayload) {
-      console.log('Role from token:', this.userPayload.role);
       return this.userPayload.role;
     }
   }

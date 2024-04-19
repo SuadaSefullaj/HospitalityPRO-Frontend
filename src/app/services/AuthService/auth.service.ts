@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse , HttpHeaders } from '@angular/common/http';
 import { catchError } from 'rxjs/operators';
 import { handleError } from 'src/app/helpers/handleError'; 
 import { Router } from '@angular/router';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { TokenApiModel } from 'src/app/models/token-api.module';
 
 @Injectable({
   providedIn: 'root'
@@ -40,8 +41,16 @@ export class AuthService {
     localStorage.setItem('token',tokenValue);
     console.log("Token stored in local storage:", tokenValue);
   }
+  storeRefreshToken(tokenValue: string){
+    localStorage.setItem('refreshToken', tokenValue);
+    console.log("Refresh Token stored in local storage:", tokenValue);
+  }
 
   getToken(){
+    return localStorage.getItem('token');
+  }
+
+  getRefreshToken(){
     return localStorage.getItem('token');
   }
 
@@ -51,9 +60,13 @@ export class AuthService {
 
   decodedToken() {
     const jwtHelper = new JwtHelperService();
-    const tokenResponse = localStorage.getItem('token')!;
-    console.log(jwtHelper.decodeToken(tokenResponse))
-    return jwtHelper.decodeToken(tokenResponse);
+    const tokenResponse = this.getToken()!;
+    // const tokenResponse = localStorage.getItem('token')!;
+    const decodedToken = jwtHelper.decodeToken(tokenResponse);
+    console.log(decodedToken);
+    this.userPayload = decodedToken; 
+    return decodedToken;
+  
   }
   
   getNameFromToken() {
@@ -68,6 +81,10 @@ export class AuthService {
       console.log('Role from token:', this.userPayload.role);
       return this.userPayload.role;
     }
+  }
+
+  refreshToken(token : any){
+    return this.http.post<any>(`${this.baseUrl}refresh-token`, token)
   }
   
 }

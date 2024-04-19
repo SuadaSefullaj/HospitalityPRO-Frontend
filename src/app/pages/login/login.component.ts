@@ -4,18 +4,28 @@ import { AuthService } from 'src/app/services/AuthService/auth.service';
 import { Router } from '@angular/router';
 import ValidateForm from 'src/app/helpers/validationform';
 import { Token } from '@angular/compiler';
+import { UserStoreService } from 'src/app/services/UserStore/user-store.service';
 
 @Component({
-  selector: 'app-login',
+  selector: 'login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+
   credentials: any = {};
   loginForm!:FormGroup;
   errorMessage: string | null = null;
   hidePassword=true;
-  constructor(private fb:FormBuilder,private auth:AuthService,private router:Router) { }
+
+  constructor(
+    private fb:FormBuilder,
+    private auth:AuthService,
+    private router:Router,
+    private userStore:UserStoreService) {
+      console.log('AuthService instance in LoginComponent:', this.auth);
+
+     }
 
   ngOnInit(): void {
     this.loginForm=this.fb.group({
@@ -28,20 +38,39 @@ export class LoginComponent implements OnInit {
     this.hidePassword=!this.hidePassword;
   }
 
-  onLogin(){
-    if(this.loginForm.valid){
-  
+  onLogin() {
+    if (this.loginForm.valid) {
       this.auth.login(this.loginForm.value)
-      .subscribe({
-        next:(res)=>{
-          this.loginForm.reset();
-          this.auth.storeToken(res.accessToken);
-          this.router.navigate(['home'])
-        },
-        error:(err)=>{
-          this.errorMessage = err;
-        }
-      })
+        .subscribe({
+          next: (res) => {
+            this.loginForm.reset();
+            this.auth.storeToken(res.accessToken);
+            this.auth.storeRefreshToken(res.refreshToken);
+            this.auth.decodedToken();
+
+          //   this.auth.refreshToken(res.refreshToken).subscribe({
+          //     next: (refreshRes) => {
+          //       console.log('Refreshed token:', refreshRes);
+          //     },
+          //     error: (refreshErr) => {
+          //       console.error('Token refresh error:', refreshErr);
+          //     }
+          //   });
+            
+          // //  this.userStore.getRoleFromStore().subscribe(role => {
+          //   if (role === 'Admin') {
+          //     this.router.navigate(['dashboard']); 
+          //   } else {
+          //     this.router.navigate(['home']);
+          //   }
+          // });
+       
+          this.router.navigate(['home']);
+          },
+          error: (err) => {
+            this.errorMessage = err;
+          }
+        })
     }else {
       ValidateForm.validateAllFormFields(this.loginForm);
     }

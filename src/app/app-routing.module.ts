@@ -7,7 +7,7 @@ import { RegistrationComponent } from './pages/register/register.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { AuthGuard } from './guards/auth.guard';
-import { RoomsComponent } from './pages/rooms/rooms.component';
+import { RoomTypesComponent } from './pages/room-types/room-types.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { ReservationComponent } from './pages/reservation/reservation.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
@@ -20,7 +20,7 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       { path: 'home', component: HomeComponent },
-      { path: 'rooms', component: RoomsComponent },
+      { path: 'room-types', component: RoomTypesComponent },
       { path: 'services', component: ServicesComponent },
       { path: 'contact-us', component: ContactUsComponent },
       { path: 'reservation', component: ReservationComponent },

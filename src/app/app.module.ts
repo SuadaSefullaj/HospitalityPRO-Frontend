@@ -16,7 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UserDropdownComponent } from './components/user-dropdown/user-dropdown.component';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { RoomsComponent } from './pages/rooms/rooms.component';
+import { RoomTypesComponent } from './pages/room-types/room-types.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { ReservationComponent } from './pages/reservation/reservation.component';
 import { ErrorPageComponent } from './pages/error-page/error-page.component';
@@ -35,7 +35,7 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
     ContactUsComponent,
     UserDropdownComponent,
     DashboardComponent,
-    RoomsComponent,
+    RoomTypesComponent,
     ServicesComponent,
     ReservationComponent,
     ErrorPageComponent,

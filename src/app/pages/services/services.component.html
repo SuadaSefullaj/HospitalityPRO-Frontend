@@ -7,14 +7,14 @@
   </div>
 
   <div class="container d-flex flex-column">
-    <div *ngFor="let service of services; let i = index" class="service-type-container d-inline-flex p-2" [class.even]="i % 2 !== 0">
+    <div *ngFor="let extraService of extraServices; let i = index" class="service-type-container d-inline-flex p-2" [class.even]="i % 2 !== 0">
       <div class="service-image-container border border-dark" [class.left]="i % 2 === 0">
-        <img [src]="service.image" [alt]="service.title" class="service-image">
+        <img [src]="servicesImages[i]" [alt]="extraService.type" class="service-image">
       </div>
       <div class="service-info d-flex flex-column align-items-center justify-content-center fs-6">
-        <h2 class="fs-2">{{ service.title }}</h2>
-        <p>{{ service.description }}</p>
-        <div class="fs-5 mt-2"><i class="fas fa-dollar-sign"></i> Cmimi: {{ service.price }}</div>
+        <h2 class="fs-2">{{ extraService.type }}</h2>
+        <p>{{ extraService.description }}</p>
+        <div class="fs-5 mt-2"><i class="fas fa-dollar-sign"></i> Cmimi: {{ extraService.price }}ALL</div>
         <button class="room-btn btn btn-primary mt-4">Rezervo ketu</button> 
       </div>
     </div>

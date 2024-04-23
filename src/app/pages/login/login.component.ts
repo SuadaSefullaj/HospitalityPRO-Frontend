@@ -16,7 +16,6 @@ export class LoginComponent implements OnInit {
   credentials: any = {};
   loginForm!:FormGroup;
   errorMessage: string | null = null;
-  hidePassword=true;
 
   constructor(
     private fb:FormBuilder,
@@ -31,10 +30,6 @@ export class LoginComponent implements OnInit {
     })
   }
 
-  showPassword(){
-    this.hidePassword=!this.hidePassword;
-  }
-
   onLogin() {
     if (this.loginForm.valid) {
       this.auth.login(this.loginForm.value)
@@ -45,15 +40,6 @@ export class LoginComponent implements OnInit {
             this.auth.storeRefreshToken(res.refreshToken);
             this.auth.decodedToken();
 
-          //   this.auth.refreshToken(res.refreshToken).subscribe({
-          //     next: (refreshRes) => {
-          //       console.log('Refreshed token:', refreshRes);
-          //     },
-          //     error: (refreshErr) => {
-          //       console.error('Token refresh error:', refreshErr);
-          //     }
-          //   });
-            
           const role = this.auth.getRoleFromToken();
             if (role === 'Admin') {
               this.router.navigate(['dashboard']); 

@@ -39,11 +39,9 @@ export class AuthService {
 
   storeToken(tokenValue:string){
     localStorage.setItem('token',tokenValue);
-    console.log("Token stored in local storage:", tokenValue);
   }
   storeRefreshToken(tokenValue: string){
     localStorage.setItem('refreshToken', tokenValue);
-    console.log("Refresh Token stored in local storage:", tokenValue);
   }
 
   getToken(){

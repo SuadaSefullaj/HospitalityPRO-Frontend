@@ -9,15 +9,10 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 ![Screenshot 2024-05-10 170327](https://github.com/SuadaSefullaj/HospitalityPRO-Frontend/assets/134237347/fc2abddd-6172-4aaa-bf1a-94a4aed50201)
 ![Screenshot 2024-05-10 170550](https://github.com/SuadaSefullaj/HospitalityPRO-Frontend/assets/134237347/43e1ccae-8205-4b46-8cb2-cff1b9f22902)
 ![Screenshot 2024-05-10 170708](https://github.com/SuadaSefullaj/HospitalityPRO-Frontend/assets/134237347/b22095c6-f35c-49ec-8ba3-4ba721b71593)
-![Screenshot 2024-05-10 170837](https://github.com/SuadaSefullaj/HospitalityPRO-Frontend/assets/134237347/5d74b998-4a53-46ff-aa33-7ef138b7dfe5)
+![Screenshot 2024-05-10 182648](https://github.com/SuadaSefullaj/HospitalityPRO-Frontend/assets/134237347/a2884d8b-b7a7-469c-b77c-c575fc13be02)
 ![Screenshot 2024-05-10 171012](https://github.com/SuadaSefullaj/HospitalityPRO-Frontend/assets/134237347/611bea54-3a60-4763-82a7-659d19a12ec0)
 ![Screenshot 2024-05-10 171128](https://github.com/SuadaSefullaj/HospitalityPRO-Frontend/assets/134237347/3dc6cd22-e96f-4a50-a02a-33722e5543c1)
-
 ![Screenshot 2024-05-10 183020](https://github.com/SuadaSefullaj/HospitalityPRO-Frontend/assets/134237347/2a6d3ad5-da51-4c39-bbc7-b444039d805e)
-![Screenshot 2024-05-10 182648](https://github.com/SuadaSefullaj/HospitalityPRO-Frontend/assets/134237347/a2884d8b-b7a7-469c-b77c-c575fc13be02)
-![Screenshot 2024-05-10 182924](https://github.com/SuadaSefullaj/HospitalityPRO-Frontend/assets/134237347/37adf3b1-2c1a-4229-b3e6-70c263adcd02)  
-
-
 ![Screenshot 2024-05-10 171228](https://github.com/SuadaSefullaj/HospitalityPRO-Frontend/assets/134237347/d40d847b-4fe8-4ef7-a4cd-deb1c4bc4b91)
 ![Screenshot 2024-05-10 171455](https://github.com/SuadaSefullaj/HospitalityPRO-Frontend/assets/134237347/f5c2bef5-5bcf-422c-bf08-a7bd65b15447)
 ![Screenshot 2024-05-10 171541](https://github.com/SuadaSefullaj/HospitalityPRO-Frontend/assets/134237347/dc353693-79b0-4ba0-adfe-b5c97052a61d)

@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-![Uploading Screenshot 2024-05-10 170327.png…
+
 ![Screenshot 2024-05-10 170550](https://github.com/SuadaSefullaj/HospitalityPRO-Frontend/assets/134237347/43e1ccae-8205-4b46-8cb2-cff1b9f22902)
 ![Screenshot 2024-05-10 170708](https://github.com/SuadaSefullaj/HospitalityPRO-Frontend/assets/134237347/b22095c6-f35c-49ec-8ba3-4ba721b71593)
 ![Screenshot 2024-05-10 170837](https://github.com/SuadaSefullaj/HospitalityPRO-Frontend/assets/134237347/5d74b998-4a53-46ff-aa33-7ef138b7dfe5)
@@ -18,7 +18,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 ![Screenshot 2024-05-10 171637](https://github.com/SuadaSefullaj/HospitalityPRO-Frontend/assets/134237347/2a19e3d4-c166-4bf9-b046-9909c8bde713)
 ![Screenshot 2024-05-10 171922](https://github.com/SuadaSefullaj/HospitalityPRO-Frontend/assets/134237347/fdbf8443-9082-4d8f-9667-95773be51196)
 ![Screenshot 2024-05-10 172027](https://github.com/SuadaSefullaj/HospitalityPRO-Frontend/assets/134237347/4ab3e809-db48-40d7-8a7c-76e1362d6900)
-]()
+
 
 
 
